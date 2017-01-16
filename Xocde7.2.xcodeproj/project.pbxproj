@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E228CA5B1E2C755200B793EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E228CA5A1E2C755200B793EC /* main.m */; };
+		E228CA5E1E2C755200B793EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E228CA5D1E2C755200B793EC /* AppDelegate.m */; };
+		E228CA611E2C755200B793EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E228CA601E2C755200B793EC /* ViewController.m */; };
+		E228CA641E2C755200B793EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E228CA621E2C755200B793EC /* Main.storyboard */; };
+		E228CA671E2C755200B793EC /* Xocde7_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E228CA651E2C755200B793EC /* Xocde7_2.xcdatamodeld */; };
+		E228CA691E2C755200B793EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E228CA681E2C755200B793EC /* Assets.xcassets */; };
+		E228CA6C1E2C755200B793EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E228CA6A1E2C755200B793EC /* LaunchScreen.storyboard */; };
+		E228CA771E2C755300B793EC /* Xocde7_2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E228CA761E2C755300B793EC /* Xocde7_2Tests.m */; };
+		E228CA821E2C755300B793EC /* Xocde7_2UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E228CA811E2C755300B793EC /* Xocde7_2UITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E228CA731E2C755300B793EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E228CA4E1E2C755200B793EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E228CA551E2C755200B793EC;
+			remoteInfo = Xocde7.2;
+		};
+		E228CA7E1E2C755300B793EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E228CA4E1E2C755200B793EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E228CA551E2C755200B793EC;
+			remoteInfo = Xocde7.2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E228CA561E2C755200B793EC /* Xocde7.2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xocde7.2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E228CA5A1E2C755200B793EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E228CA5C1E2C755200B793EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E228CA5D1E2C755200B793EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E228CA5F1E2C755200B793EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E228CA601E2C755200B793EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E228CA631E2C755200B793EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E228CA661E2C755200B793EC /* Xocde7_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Xocde7_2.xcdatamodel; sourceTree = "<group>"; };
+		E228CA681E2C755200B793EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E228CA6B1E2C755200B793EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E228CA6D1E2C755200B793EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E228CA721E2C755300B793EC /* Xocde7.2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xocde7.2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E228CA761E2C755300B793EC /* Xocde7_2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xocde7_2Tests.m; sourceTree = "<group>"; };
+		E228CA781E2C755300B793EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E228CA7D1E2C755300B793EC /* Xocde7.2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Xocde7.2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E228CA811E2C755300B793EC /* Xocde7_2UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Xocde7_2UITests.m; sourceTree = "<group>"; };
+		E228CA831E2C755300B793EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E228CA531E2C755200B793EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA6F1E2C755300B793EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA7A1E2C755300B793EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E228CA4D1E2C755200B793EC = {
+			isa = PBXGroup;
+			children = (
+				E228CA581E2C755200B793EC /* Xocde7.2 */,
+				E228CA751E2C755300B793EC /* Xocde7.2Tests */,
+				E228CA801E2C755300B793EC /* Xocde7.2UITests */,
+				E228CA571E2C755200B793EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E228CA571E2C755200B793EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E228CA561E2C755200B793EC /* Xocde7.2.app */,
+				E228CA721E2C755300B793EC /* Xocde7.2Tests.xctest */,
+				E228CA7D1E2C755300B793EC /* Xocde7.2UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E228CA581E2C755200B793EC /* Xocde7.2 */ = {
+			isa = PBXGroup;
+			children = (
+				E228CA5C1E2C755200B793EC /* AppDelegate.h */,
+				E228CA5D1E2C755200B793EC /* AppDelegate.m */,
+				E228CA5F1E2C755200B793EC /* ViewController.h */,
+				E228CA601E2C755200B793EC /* ViewController.m */,
+				E228CA621E2C755200B793EC /* Main.storyboard */,
+				E228CA681E2C755200B793EC /* Assets.xcassets */,
+				E228CA6A1E2C755200B793EC /* LaunchScreen.storyboard */,
+				E228CA6D1E2C755200B793EC /* Info.plist */,
+				E228CA651E2C755200B793EC /* Xocde7_2.xcdatamodeld */,
+				E228CA591E2C755200B793EC /* Supporting Files */,
+			);
+			path = Xocde7.2;
+			sourceTree = "<group>";
+		};
+		E228CA591E2C755200B793EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E228CA5A1E2C755200B793EC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E228CA751E2C755300B793EC /* Xocde7.2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E228CA761E2C755300B793EC /* Xocde7_2Tests.m */,
+				E228CA781E2C755300B793EC /* Info.plist */,
+			);
+			path = Xocde7.2Tests;
+			sourceTree = "<group>";
+		};
+		E228CA801E2C755300B793EC /* Xocde7.2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				E228CA811E2C755300B793EC /* Xocde7_2UITests.m */,
+				E228CA831E2C755300B793EC /* Info.plist */,
+			);
+			path = Xocde7.2UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E228CA551E2C755200B793EC /* Xocde7.2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E228CA861E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2" */;
+			buildPhases = (
+				E228CA521E2C755200B793EC /* Sources */,
+				E228CA531E2C755200B793EC /* Frameworks */,
+				E228CA541E2C755200B793EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Xocde7.2;
+			productName = Xocde7.2;
+			productReference = E228CA561E2C755200B793EC /* Xocde7.2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E228CA711E2C755300B793EC /* Xocde7.2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E228CA891E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2Tests" */;
+			buildPhases = (
+				E228CA6E1E2C755300B793EC /* Sources */,
+				E228CA6F1E2C755300B793EC /* Frameworks */,
+				E228CA701E2C755300B793EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E228CA741E2C755300B793EC /* PBXTargetDependency */,
+			);
+			name = Xocde7.2Tests;
+			productName = Xocde7.2Tests;
+			productReference = E228CA721E2C755300B793EC /* Xocde7.2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E228CA7C1E2C755300B793EC /* Xocde7.2UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E228CA8C1E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2UITests" */;
+			buildPhases = (
+				E228CA791E2C755300B793EC /* Sources */,
+				E228CA7A1E2C755300B793EC /* Frameworks */,
+				E228CA7B1E2C755300B793EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E228CA7F1E2C755300B793EC /* PBXTargetDependency */,
+			);
+			name = Xocde7.2UITests;
+			productName = Xocde7.2UITests;
+			productReference = E228CA7D1E2C755300B793EC /* Xocde7.2UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E228CA4E1E2C755200B793EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Ernie Liu";
+				TargetAttributes = {
+					E228CA551E2C755200B793EC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					E228CA711E2C755300B793EC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E228CA551E2C755200B793EC;
+					};
+					E228CA7C1E2C755300B793EC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = E228CA551E2C755200B793EC;
+					};
+				};
+			};
+			buildConfigurationList = E228CA511E2C755200B793EC /* Build configuration list for PBXProject "Xocde7.2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E228CA4D1E2C755200B793EC;
+			productRefGroup = E228CA571E2C755200B793EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E228CA551E2C755200B793EC /* Xocde7.2 */,
+				E228CA711E2C755300B793EC /* Xocde7.2Tests */,
+				E228CA7C1E2C755300B793EC /* Xocde7.2UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E228CA541E2C755200B793EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E228CA6C1E2C755200B793EC /* LaunchScreen.storyboard in Resources */,
+				E228CA691E2C755200B793EC /* Assets.xcassets in Resources */,
+				E228CA641E2C755200B793EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA701E2C755300B793EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA7B1E2C755300B793EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E228CA521E2C755200B793EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E228CA671E2C755200B793EC /* Xocde7_2.xcdatamodeld in Sources */,
+				E228CA611E2C755200B793EC /* ViewController.m in Sources */,
+				E228CA5E1E2C755200B793EC /* AppDelegate.m in Sources */,
+				E228CA5B1E2C755200B793EC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA6E1E2C755300B793EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E228CA771E2C755300B793EC /* Xocde7_2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E228CA791E2C755300B793EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E228CA821E2C755300B793EC /* Xocde7_2UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E228CA741E2C755300B793EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E228CA551E2C755200B793EC /* Xocde7.2 */;
+			targetProxy = E228CA731E2C755300B793EC /* PBXContainerItemProxy */;
+		};
+		E228CA7F1E2C755300B793EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E228CA551E2C755200B793EC /* Xocde7.2 */;
+			targetProxy = E228CA7E1E2C755300B793EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E228CA621E2C755200B793EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E228CA631E2C755200B793EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E228CA6A1E2C755200B793EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E228CA6B1E2C755200B793EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E228CA841E2C755300B793EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E228CA851E2C755300B793EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E228CA871E2C755300B793EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Xocde7.2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E228CA881E2C755300B793EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Xocde7.2/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E228CA8A1E2C755300B793EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Xocde7.2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xocde7.2.app/Xocde7.2";
+			};
+			name = Debug;
+		};
+		E228CA8B1E2C755300B793EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Xocde7.2Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Xocde7.2.app/Xocde7.2";
+			};
+			name = Release;
+		};
+		E228CA8D1E2C755300B793EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Xocde7.2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Xocde7.2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		E228CA8E1E2C755300B793EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = Xocde7.2UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-17lng.com.Xocde7-2UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Xocde7.2;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E228CA511E2C755200B793EC /* Build configuration list for PBXProject "Xocde7.2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E228CA841E2C755300B793EC /* Debug */,
+				E228CA851E2C755300B793EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E228CA861E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E228CA871E2C755300B793EC /* Debug */,
+				E228CA881E2C755300B793EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E228CA891E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E228CA8A1E2C755300B793EC /* Debug */,
+				E228CA8B1E2C755300B793EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E228CA8C1E2C755300B793EC /* Build configuration list for PBXNativeTarget "Xocde7.2UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E228CA8D1E2C755300B793EC /* Debug */,
+				E228CA8E1E2C755300B793EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E228CA651E2C755200B793EC /* Xocde7_2.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E228CA661E2C755200B793EC /* Xocde7_2.xcdatamodel */,
+			);
+			currentVersion = E228CA661E2C755200B793EC /* Xocde7_2.xcdatamodel */;
+			path = Xocde7_2.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E228CA4E1E2C755200B793EC /* Project object */;
+}
