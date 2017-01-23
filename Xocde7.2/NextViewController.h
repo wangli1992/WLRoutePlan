@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  NextViewController.h
 //  Xocde7.2
 //
 //  Created by Ernie Liu on 17/1/16.
@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface ViewController : UIViewController
-
+#import "WLPublicVC.h"
+@interface NextViewController : WLPublicVC
 
 @end
-

@@ -7,19 +7,168 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MainViewController.h"
+#import "NextViewController.h"
 @interface AppDelegate ()
 
+@property(nonatomic,strong) BMKMapManager   *mapManager;
+@property(nonatomic,strong)CLLocationManager *locationManager ;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    return YES;
-}
+    // 1.创建窗口
+    self.window = [[UIWindow alloc] init];
+    self.window.frame = [UIScreen mainScreen].bounds;
+    
+   NextViewController *vc = [[NextViewController alloc]init];
+    UINavigationController *nv = [[UINavigationController alloc]initWithRootViewController:vc];
+    self.window.rootViewController = nv;
+    // 3.显示窗口
+    [self.window makeKeyAndVisible];
+    
+    _mapManager=[[BMKMapManager alloc]  init];
+    
+    BOOL ret=[_mapManager start: @"C8yGGoDS08IN7QqcbzRwinjc6NPGOGEy" generalDelegate:nil];
+    if(!ret){
+        NSLog(@"Baidu Map Manager Start failed!");
+        
+        //init baidu navigation
+    }
+    if ([CLLocationManager locationServicesEnabled])
+    {
+        NSLog( @"Starting CLLocationManager" );
+    }
+    else
+    {
+        NSLog( @"Cannot Starting CLLocationManager" );
+    }
 
+    NSLog(@"ios系统为:%.2f",[[UIDevice currentDevice].systemVersion floatValue]);
+    //系统定位功能
+    if([[UIDevice currentDevice].systemVersion floatValue]>=8.0)
+    {
+    //初始化定位管理器
+    self.locationManager = [[CLLocationManager alloc]init];
+    //设置代理
+    self.locationManager.delegate = self;
+    //定位精准度
+   // self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+         _locationManager.distanceFilter = kCLDistanceFilterNone;
+    //横向移动多少距离后更新位置信息
+    self.locationManager.distanceFilter = 10;
+  [_locationManager requestAlwaysAuthorization];
+   [_locationManager requestWhenInUseAuthorization];
+        if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+            [self.locationManager requestAlwaysAuthorization];
+        }
+    [self.locationManager startUpdatingLocation];
+  }
+     return YES;
+}
+#pragma - location manager
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+{
+    NSDictionary* testdic = BMKConvertBaiduCoorFrom(newLocation.coordinate,BMK_COORDTYPE_COMMON);
+    //转换GPS坐标至百度坐标(加密后的坐标)
+    testdic = BMKConvertBaiduCoorFrom(newLocation.coordinate,BMK_COORDTYPE_GPS);
+    CLLocationCoordinate2D loc = newLocation.coordinate;
+    //解密加密后的坐标字典
+   // CLLocationCoordinate2D loc = BMKCoorDictionaryDecode(testdic);//转换后的百度坐标
+    //纬度为
+    float lat = loc.latitude;
+    float log = loc.longitude;
+    [UD setValue:[NSString stringWithFormat:@"%f",lat] forKey:@"baidu_current_lat"];
+    [UD setValue:[NSString stringWithFormat:@"%f",log] forKey:@"baidu_current_long"];
+   
+    // 获取当前所在的地址
+    //初始化地理信息编码类（CLGeocoder类相当于一个地址簿，保存了庞大的地址数据）
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    //反地理编码
+    [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *array, NSError *error){
+        //数组中包含了编译出的地标
+        if (array.count > 0){
+            //获取到编译出的地标（CLPlacemark是一个地标类，封装了经纬度，国家，城市等地址信息）
+            CLPlacemark *placemark = [array objectAtIndex:0];
+            //当前地址
+//            self.labelAdress.text = placemark.name;
+            NSLog(@"placemark.name = %@",placemark.name);
+            //获取当前城市城市
+            NSString *city = placemark.locality;
+            if (!city) {
+                //四大直辖市的城市信息无法通过locality获得，只能通过获取省份的方法来获得（如果city为空，则可知为直辖市）
+                city = placemark.administrativeArea;
+            }
+            NSLog(@"city666 = %@", city);
+            [UD setValue:city forKey:@"currentCity"];
+          //  NSLog(@"addressDictionary = %@",placemark.addressDictionary);
+            //地址字典：(该字典属性打包了所有获取到的有效的地理信息)打出字典中的每个元素查看
+            /*
+             FormattedAddressLines = (中国浙江省杭州市西湖区留下街道)
+             Name = 中国浙江省杭州市西湖区留下街道
+             City = 杭州市
+             Country = 中国
+             State = 浙江省
+             SubLocality = 西湖区
+             CountryCode = CN
+             */
+            /*
+            NSLog(@"name = %@",placemark.name);
+            //定位到的详细地址：name = 中国浙江省杭州市西湖区留下街道
+            NSLog(@"thoroughfare = %@",placemark.thoroughfare);
+            //街道地址：thoroughfare = (null)
+            NSLog(@"subThoroughfare = %@",placemark.subThoroughfare);
+            //其他街道级地标的信息：subThoroughfare = (null)
+            NSLog(@"locality = %@",placemark.locality);
+            //城市名（对于直辖市，用administrativeArea）：locality = 杭州市
+            NSLog(@"subLocality = %@",placemark.subLocality);
+            //其他城市级地标的信息：subLocality = 西湖区
+            NSLog(@"administrativeArea = %@",placemark.administrativeArea);
+            //行政区域：administrativeArea = 浙江省
+            NSLog(@"subAdministrativeArea = %@",placemark.subAdministrativeArea);
+            //其他行政区域坐标：subAdministrativeArea = (null)
+            NSLog(@"postalCode = %@",placemark.postalCode);
+            //邮编：postalCode = (null)
+            NSLog(@"ISOcountryCode = %@",placemark.ISOcountryCode);
+            //国家名缩写：ISOcountryCode = CN
+            NSLog(@"country = %@",placemark.country);
+            //国家：country = 中国
+            NSLog(@"inlandWater = %@",placemark.inlandWater);
+            //定位到的内陆水源名称：inlandWater = (null)
+            NSLog(@"ocean = %@",placemark.ocean);
+            //定位到的海洋：ocean = (null)
+            NSLog(@"areasOfInterest = %@",placemark.areasOfInterest);
+            //大的地标建筑：areasOfInterest = (null)
+            */
+        }
+        
+        else if (error == nil && [array count] == 0)
+        {
+            NSLog(@"No results were returned.");
+        }
+        else if (error != nil)
+        {
+            NSLog(@"An error occurred = %@", error);
+        }
+    }];
+     [UD synchronize];
+}
+//定位失败时的回调
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error{
+    NSString *errMsg = nil;
+    if ([error code] == kCLErrorDenied) {
+        errMsg = @"访问被拒绝";
+    }
+    if ([error code] == kCLErrorLocationUnknown) {
+        errMsg = @"获取位置信息失败";
+    }
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"定位" message:errMsg delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
+    [alert show];
+}
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
